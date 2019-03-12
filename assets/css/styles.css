@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
 
 /* General Styles */
 * {
@@ -13,7 +14,7 @@ html {
     color: #555;
 }
 
-nav {
+ul, nav {
     list-style: none;
 }
 
@@ -41,6 +42,40 @@ section {
     flex-direction: column;
     align-items: center;
     padding: 100px 80px;
+}
+
+section:not(.hero):nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 /* Header Styles */
@@ -113,10 +148,6 @@ header nav li {
     width: 50%;
 }
 
-.hero a.btn:hover {
-    transform: scale(1.05);
-}
-
 .hero a.btn:active {
     transform: scale(0.95);
 }
@@ -135,6 +166,35 @@ header nav li {
 }
 
 
+/* Destination Section */
+.destinations .grid li {
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
 
+.destinations .grid li.small {
+    flex-basis: 30%;
+}
 
-/* add a transition to contact us btn */
+.destinations .grid li.large {
+    flex-basis: 70%;
+}
+
+/* Packages Section */
+.packages .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.packages .grid li i {
+    color: #8c9eff;
+}
+
+.packages .grid li h4 {
+    font-size: 30px;
+    margin: 25px 0;
+}
